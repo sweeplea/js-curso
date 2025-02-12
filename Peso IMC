@@ -1,0 +1,52 @@
+# Función para calcular el IMC
+def calcular_imc(peso, altura):
+    imc = peso / (altura ** 2)
+    return round(imc, 2)
+
+# Función para calcular el factorial
+def calcular_factorial(numero):
+    if numero < 0:
+        return "No existe factorial para números negativos."
+    elif numero == 0 or numero == 1:
+        return 1
+    else:
+        factorial = 1
+        for i in range(2, numero + 1):
+            factorial *= i
+        return factorial
+
+# Función para convertir dólares a reales
+def convertir_dolar_a_real(dolares, cotizacion=4.80):
+    reales = dolares * cotizacion
+    return round(reales, 2)
+
+# Función para área y perímetro de una sala rectangular
+def area_perimetro_rectangulo(altura, anchura):
+    area = altura * anchura
+    perimetro = 2 * (altura + anchura)
+    print(f"Área del rectángulo: {area} m²")
+    print(f"Perímetro del rectángulo: {perimetro} m")
+
+# Función para área y perímetro de una sala circular
+def area_perimetro_circulo(radio, pi=3.14):
+    area = pi * (radio ** 2)
+    perimetro = 2 * pi * radio
+    print(f"Área del círculo: {area} m²")
+    print(f"Perímetro del círculo: {perimetro} m")
+
+# Función para mostrar la tabla de multiplicar
+def tabla_multiplicar(numero):
+    print(f"Tabla de multiplicar del {numero}:")
+    for i in range(1, 11):
+        print(f"{numero} x {i} = {numero * i}")
+
+# Ejemplos de uso
+print("IMC:", calcular_imc(70, 1.75))
+print("Factorial:", calcular_factorial(5))
+print("Dólares a Reales:", convertir_dolar_a_real(100))
+area_perimetro_rectangulo(5, 10)
+area_perimetro_circulo(7)
+tabla_multiplicar(6)
+
+Puedes copiar este código y probarlo en cualquier entorno de desarrollo de Python. ¡Si necesitas alguna modificación o explicación adicional, avísame!
+
