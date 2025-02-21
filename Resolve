@@ -1,0 +1,46 @@
+# Crear una lista vacía
+listaGenerica = []
+
+# Crear una lista de lenguajes de programación
+lenguagesDeProgramacion = ['JavaScript', 'C', 'C++', 'Kotlin', 'Python']
+
+# Agregar elementos a la lista
+lenguagesDeProgramacion.extend(['Java', 'Ruby', 'GoLang'])
+
+# Función para mostrar los elementos de la lista
+def mostrar_lista(lista):
+    for elemento in lista:
+        print(elemento)
+
+# Función para mostrar los elementos en orden inverso
+def mostrar_lista_inversa(lista):
+    for elemento in reversed(lista):
+        print(elemento)
+
+# Función para calcular el promedio de una lista de números
+def calcular_promedio(lista):
+    return sum(lista) / len(lista) if lista else 0
+
+# Función para encontrar el número más grande y más pequeño
+def encontrar_min_max(lista):
+    if not lista:
+        return None, None
+    return min(lista), max(lista)
+
+# Función para calcular la suma de todos los elementos en una lista
+def sumar_elementos(lista):
+    return sum(lista)
+
+# Función para encontrar la posición de un elemento en una lista
+def encontrar_posicion(lista, elemento):
+    return lista.index(elemento) if elemento in lista else -1
+
+# Función para sumar elementos de dos listas de igual tamaño
+def sumar_listas(lista1, lista2):
+    if len(lista1) != len(lista2):
+        return None
+    return [a + b for a, b in zip(lista1, lista2)]
+
+# Función para devolver una lista con los cuadrados de los elementos
+def cuadrados_lista(lista):
+    return [x ** 2 for x in lista]
